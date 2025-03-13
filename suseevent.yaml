@@ -36,8 +36,7 @@ data:
       <head><title>MalamTeam</title></head>
       <body>
         <h1 style="text-align: center;">MalamTeam</h1>
-        <h1 style="text-align: center;"></h1>Welcome to Suse Event</h1>
-        <h1>Welcome to Suse Event</h1>
+        <h1 style="text-align: center;">Welcome to Suse Event</h1>
       </body>
     </html>
 
