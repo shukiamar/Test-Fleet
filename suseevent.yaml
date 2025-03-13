@@ -41,9 +41,9 @@ metadata:
 data:
   index.html: |
     <html>
-      <head><title>Welcome</title></head>
+      <head><title>MalamTeam</title></head>
       <body>
-        <h1>Welcome to Kubernetes Event</h1>
+        <h1>Welcome to Suse Event</h1>
       </body>
     </html>
 
