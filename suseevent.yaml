@@ -1,16 +1,9 @@
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: demo  # Create the 'demo' namespace
-
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment
-  namespace: demo  # Set the namespace to 'demo'
 spec:
-  replicas: 3  # Setting the number of replicas to 3
+  replicas: 1
   selector:
     matchLabels:
       app: nginx
@@ -37,7 +30,6 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: nginx-config
-  namespace: demo  # Set the namespace to 'demo'
 data:
   index.html: |
     <html>
@@ -52,7 +44,6 @@ apiVersion: v1
 kind: Service
 metadata:
   name: nginx-service
-  namespace: demo  # Set the namespace to 'demo'
 spec:
   selector:
     app: nginx
@@ -60,4 +51,4 @@ spec:
     - protocol: TCP
       port: 8181
       targetPort: 80
-  type: LoadBalancer  # Change to LoadBalancer if using a cloud provider that supports external access
+  type: LoadBalancer
