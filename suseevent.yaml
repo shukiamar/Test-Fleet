@@ -23,7 +23,7 @@ spec:
       - name: nginx
         image: nginx:latest
         ports:
-        - containerPort: 8181
+        - containerPort: 80
         volumeMounts:
         - mountPath: /usr/share/nginx/html
           name: html-volume
@@ -59,5 +59,5 @@ spec:
   ports:
     - protocol: TCP
       port: 8181
-      targetPort: 8181
+      targetPort: 80
   type: LoadBalancer  # Change to LoadBalancer if using a cloud provider that supports external access
